@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfbt3xm1o862a"]
+
+[ext_resource type="Script" path="res://Scripts/ImageImporter.gd" id="1_c8lqr"]
+[ext_resource type="Texture2D" uid="uid://nedy33lf02vv" path="res://images/drawings/umbrella.png" id="2_dqvtu"]
+[ext_resource type="Texture2D" uid="uid://brk44fmm06nyu" path="res://images/drawings/carrot.png" id="3_0nimn"]
+[ext_resource type="Texture2D" uid="uid://dw3ni3ibmqcwt" path="res://images/drawings/snow_flake.png" id="4_o2csr"]
+[ext_resource type="Texture2D" uid="uid://dbpe0eudtnay4" path="res://images/drawings/football.png" id="5_xe4v4"]
+[ext_resource type="Texture2D" uid="uid://dtoofemluk2ah" path="res://images/drawings/basketball.png" id="6_7bcxm"]
+[ext_resource type="Texture2D" uid="uid://ckpl2ubvyjyfq" path="res://images/drawings/cake.png" id="7_u5gv8"]
+[ext_resource type="Texture2D" uid="uid://qf625xv5aaxr" path="res://images/drawings/apple.png" id="8_ek5up"]
+[ext_resource type="Texture2D" uid="uid://cpt1d53ibwjoq" path="res://images/drawings/robot.png" id="9_fqxmd"]
+[ext_resource type="Texture2D" uid="uid://cgpckcaykfgmk" path="res://images/drawings/human.png" id="10_f7rhx"]
+[ext_resource type="Texture2D" uid="uid://dtgc8qcpyj2ll" path="res://images/drawings/car.png" id="11_d741w"]
+[ext_resource type="Texture2D" uid="uid://f68uc32bu4c7" path="res://images/drawings/house.png" id="12_n7jcn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_c8lqr")
+
+[node name="Canvas" type="Node2D" parent="."]
+
+[node name="Carrot" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-472, 2420)
+scale = Vector2(2.09, 2.09)
+texture = ExtResource("3_0nimn")
+
+[node name="SnowFlake" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(905, 530)
+scale = Vector2(1.965, 1.965)
+texture = ExtResource("4_o2csr")
+
+[node name="Football" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1557, 1168)
+scale = Vector2(2.07, 2.07)
+texture = ExtResource("5_xe4v4")
+
+[node name="Basketball" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1013, 1405)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("6_7bcxm")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1459.0
+offset_top = 727.0
+offset_right = 1826.0
+offset_bottom = 835.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+toggle_mode = true
+text = "Windowed"
+
+[node name="Cake" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-287, 528)
+texture = ExtResource("7_u5gv8")
+
+[node name="Apple" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1650, 1045)
+scale = Vector2(2.225, 2.225)
+texture = ExtResource("8_ek5up")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1735.0
+offset_top = 1032.0
+offset_right = 1906.0
+offset_bottom = 1072.0
+text = "CTRL + Z : UNDO"
+
+[node name="Robot" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1390, 1329)
+scale = Vector2(2.27, 2.27)
+texture = ExtResource("9_fqxmd")
+
+[node name="Human" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-499, 1971)
+scale = Vector2(2.37, 2.37)
+texture = ExtResource("10_f7rhx")
+
+[node name="Car" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-742, 1711)
+scale = Vector2(2.545, 2.545)
+texture = ExtResource("11_d741w")
+
+[node name="House" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-876, 1543)
+scale = Vector2(2.675, 2.675)
+texture = ExtResource("12_n7jcn")
+
+[node name="Umbrella" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-904, 1465)
+scale = Vector2(2.215, 2.215)
+texture = ExtResource("2_dqvtu")
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
